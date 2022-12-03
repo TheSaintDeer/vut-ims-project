@@ -1,10 +1,10 @@
 #include <cmath>
 #include "NystromN.h"
 //#include <cxxplot/cxxplot>
-#include "cxxplot.hpp"
+//#include "cxxplot.hpp"
 
-class FlyingBall : public SecondDerivativeN
-{
+class FlyingBall : public SecondDerivativeN {
+
 private:
     double dB = 0.0;
     double roB = 0.0;

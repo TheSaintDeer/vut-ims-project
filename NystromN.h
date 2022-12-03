@@ -4,8 +4,8 @@
 
 #include "PointN.h"
 
-class SecondDerivativeN
-{
+class SecondDerivativeN {
+
 public:
     virtual PointN GetValue(double t, PointN y, PointN dy) = 0;
 };
@@ -13,8 +13,8 @@ public:
 //.h file code:
 
 
-class NystromN
-{
+class NystromN {
+
 private:
     SecondDerivativeN *secondDerivative;
     double t0 = 0.0;

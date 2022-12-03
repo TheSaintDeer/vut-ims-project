@@ -15,8 +15,7 @@ PointN FlyingBall::GetValue(double t, PointN y, PointN v) {
 
     double cosAlpha = 1;
     double cosBeta = 0;
-    if (vTotal > 1.0e-12)
-    {
+    if (vTotal > 1.0e-12) {
         cosAlpha = vx / vTotal;
         cosBeta = vy / vTotal;
     }
