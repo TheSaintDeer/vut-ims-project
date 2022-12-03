@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cmath>
 #include "NystromN.h"
 //#include <cxxplot/cxxplot>

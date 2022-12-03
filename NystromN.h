@@ -1,6 +1,7 @@
 //
 // Created by max on 2.12.22.
 //
+#pragma once
 
 #include "PointN.h"
 

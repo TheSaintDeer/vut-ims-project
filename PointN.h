@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include <memory>
 using namespace std;
@@ -9,7 +11,7 @@ private:
     int n = 0;
 
 public:
-    PointN(int n);
+    explicit PointN(int n);
     PointN(PointN const &a);
 
     double operator [](int i);
