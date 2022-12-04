@@ -17,6 +17,7 @@ ARCH = tar
 # The build target
 TARGET = main
 LIST = PointN.cpp NystromN.cpp FlyingBall.cpp Wind.cpp Test.cpp
+HEADERS = PointN.h NystromN.h FlyingBall.h Wind.h Test.h
 ADDITIONS = Makefile
 
 all: clean $(TARGET) tar
@@ -28,4 +29,4 @@ clean:
 	$(RM) $(TARGET) $(LOGIN).tar
 
 tar:
-	$(ARCH) cvf $(LOGIN).tar $(TARGET).cpp $(LIST) $(ADDITIONS)
+	$(ARCH) cvf $(LOGIN).tar $(TARGET).cpp $(LIST) $(HEADERS) $(ADDITIONS)
