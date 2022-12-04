@@ -6,19 +6,13 @@
 #include <cstring>
 #include "FlyingBall.h"
 
-enum directionWind{
-    None, N, NW, W, SW, S, SE, E, NE
-};
-
 class Wind {
 
 public:
-    string dir;
-    PointN windDir = PointN(2);
-    PointN force = PointN(2);
+    PointN direction = PointN(3);
+    double force = 0.0;
+    PointN forceDirection = PointN(3);
 
     Wind();
-    explicit Wind(const string&);
-
-    void setForce(double);
+    explicit Wind(const PointN&, double);
 };

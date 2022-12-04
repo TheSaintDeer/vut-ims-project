@@ -33,3 +33,5 @@ int NystromN::Step(double &t1, PointN &y1, PointN &dy1, PointN &d2y1) {
 
     return 0;
 }
+
+NystromN::NystromN() = default;

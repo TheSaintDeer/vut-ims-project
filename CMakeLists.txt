@@ -10,4 +10,4 @@ set(CMAKE_CXX_STANDARD 14)
 #link_libraries(Python3::Python)
 #link_libraries(Python3::NumPy)
 
-add_executable(ims_project main.cpp PointN.cpp PointN.h NystromN.cpp NystromN.h FlyingBall.cpp FlyingBall.h Wind.cpp Wind.h)
+add_executable(ims_project main.cpp PointN.cpp PointN.h NystromN.cpp NystromN.h FlyingBall.cpp FlyingBall.h Wind.cpp Wind.h Test.cpp Test.h)
