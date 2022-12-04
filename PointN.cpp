@@ -4,6 +4,11 @@
 
 #include "PointN.h"
 
+/**
+ * Creates n-dimensional point
+ *
+ * @param n number of dimensions
+ */
 PointN::PointN(int n) {
     this->n = n;
     this->x = vector<double>(n);

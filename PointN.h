@@ -3,7 +3,7 @@
 #include <vector>
 #include <memory>
 using namespace std;
-
+#pragma once
 class PointN {
 
 private:
