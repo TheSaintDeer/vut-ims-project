@@ -1,7 +1,6 @@
 //
 // Created by max on 2.12.22.
 //
-#include "Wind.h"
 #include "FlyingBall.h"
 
 PointN FlyingBall::GetValue(double t, PointN y, PointN v) {

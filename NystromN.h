@@ -2,7 +2,6 @@
 // Created by max on 2.12.22.
 //
 #pragma once
-#pragma once
 #include "PointN.h"
 
 class SecondDerivativeN {

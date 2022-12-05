@@ -18,6 +18,6 @@ public:
     PointN velocity = PointN(3);
     PointN acceleration = PointN(3);
 
-    Test(PointN, const Wind&, double, double, double, double, double);
+    Test(PointN direction, const Wind& w, double dB, double roB, double cD, double g, double roA);
     void Start();
 };

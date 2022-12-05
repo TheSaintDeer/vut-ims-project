@@ -2,6 +2,7 @@
 // Created by ivan on 4.12.22.
 //
 
+#include <fstream>
 #include "Test.h"
 
 Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, double g, double roA) {
@@ -10,7 +11,7 @@ Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, do
     this->projectile = FlyingBall(dB, roB, cD, g, roA, w.forceDirection);
     SecondDerivativeN *accelFunction = &(projectile);
 
-    double h = 0.5;
+    double h = 0.1;
 
     PointN startPosition = PointN(3);
     startPosition.x[0] = 0;
@@ -29,8 +30,12 @@ Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, do
 }
 void Test::Start() {
 
+    ofstream f(R"(out.txt)", ios::out | ios::trunc);
+
     do {
         this->integrator.Step(t, position, velocity, acceleration);
-        std::cout << t << " " << position.x[0] << " " << position.x[1] << " " << position.x[2] << endl;
+        f << t << ": [" << position.x[0] << " : " << position.x[1] << " : " << position.x[2] << "] [" << velocity.x[0] << " : " << velocity.x[1] << " : " << velocity.x[2] << "]" << endl;
     } while (position.x[2] > 0);
+
+    f.close();
 }
