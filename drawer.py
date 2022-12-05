@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 
 f = open('out.txt', 'r')
 
-fig = plt.subplots()
-
 time = []
 position = [[], [], []]
 velocity = [[], [], []]
@@ -24,7 +22,30 @@ for line in lines:
     for i in range(0, 3):
         velocity[i].append(v[i])
 
-plt.plot(time, velocity[0])
-plt.show()
-
 f.close()
+
+fig = plt.figure()
+
+ax1 = fig.add_subplot(211)
+ax1.set_title('Project IMS (flight path)')
+ax1.plot(position[0], position[2])
+ax1.set_title('Project IMS (flight path)')
+ax1.set_xlabel('x (m)')
+ax1.set_ylabel('z (m)')
+max = max(position[0]) if max(position[0]) > max(position[2]) else max(position[2])
+ax1.set_xlim([0, max])
+ax1.set_ylim([0, max])
+
+ax2 = fig.add_subplot(223)
+ax2.set_title('Project IMS (velocity x)')
+ax2.plot(time, velocity[0])
+ax2.set_xlabel('t (s)')
+ax2.set_ylabel('x (m/s)')
+
+ax3 = fig.add_subplot(224)
+ax3.set_title('Project IMS (velocity z)')
+ax3.plot(time, velocity[2])
+ax3.set_xlabel('t (s)')
+ax3.set_ylabel('z (m/s)')
+
+plt.show()

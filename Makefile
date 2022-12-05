@@ -36,11 +36,13 @@ test1:
 	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
 
 test2:
-	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.5 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
-
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.47 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
 
 test3:
-	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.5 --wx 1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.5 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
 
 test4:
-	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.5 --wx -1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.04 --wx 1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
+
+test5:
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.47 --wx -1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
