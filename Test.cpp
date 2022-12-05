@@ -31,10 +31,11 @@ Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, do
 void Test::Start() {
 
     ofstream f(R"(out.txt)", ios::out | ios::trunc);
+    f << t << " " << integrator.y0.x[0] << ":" << integrator.y0.x[1] << ":" << integrator.y0.x[2] << " " << integrator.dy0.x[0] << ":" << integrator.dy0.x[1] << ":" << integrator.dy0.x[2] << "" << endl;
 
     do {
         this->integrator.Step(t, position, velocity, acceleration);
-        f << t << ": [" << position.x[0] << " : " << position.x[1] << " : " << position.x[2] << "] [" << velocity.x[0] << " : " << velocity.x[1] << " : " << velocity.x[2] << "]" << endl;
+        f << t << " " << position.x[0] << ":" << position.x[1] << ":" << position.x[2] << " " << velocity.x[0] << ":" << velocity.x[1] << ":" << velocity.x[2] << "" << endl;
     } while (position.x[2] > 0);
 
     f.close();

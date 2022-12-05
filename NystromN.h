@@ -12,7 +12,7 @@ public:
 
 class NystromN {
 
-private:
+public:
     SecondDerivativeN *secondDerivative{};
     double t0 = 0.0;
     double h = 0.0;
@@ -20,7 +20,6 @@ private:
     PointN dy0 = PointN(3);
     PointN d2y0 = PointN(3);
 
-public:
     NystromN(SecondDerivativeN *secondDerivative, double t0, PointN y0, PointN dy0, double h, PointN d2y0);
 
     NystromN();
