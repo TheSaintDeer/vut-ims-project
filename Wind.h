@@ -9,10 +9,10 @@
 class Wind {
 
 public:
-    PointN direction = PointN(3);
+    Point direction = Point(3);
     double force = 0.0;
-    PointN forceDirection = PointN(3);
+    Point forceDirection = Point(3);
 
     Wind();
-    explicit Wind(const PointN&, double);
+    explicit Wind(const Point&, double);
 };

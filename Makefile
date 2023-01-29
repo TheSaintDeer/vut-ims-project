@@ -17,8 +17,8 @@ ARCH = tar
 # The build target
 TARGET = main
 OUT = out.txt
-LIST = PointN.cpp NystromN.cpp FlyingBall.cpp Wind.cpp Test.cpp
-HEADERS = PointN.h NystromN.h FlyingBall.h Wind.h Test.h
+LIST = Point.cpp Nystrom.cpp FlyingBall.cpp Wind.cpp Test.cpp
+HEADERS = Point.h Nystrom.h FlyingBall.h Wind.h Test.h
 ADDITIONS = Makefile
 
 $(TARGET): $(TARGET).cpp
@@ -30,7 +30,7 @@ clean:
 	$(RM) $(TARGET) $(LOGIN).tar $(OUT)
 
 tar:
-	$(ARCH) cvf $(LOGIN).tar $(TARGET).cpp $(LIST) $(HEADERS) $(ADDITIONS)
+	$(ARCH) cvf $(LOGIN).tar $(TARGET).cpp $(LIST) $(HEADERS) $(ADDITIONS) docs.pdf drawer.py
 
 test1:
 	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
@@ -39,10 +39,10 @@ test2:
 	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.47 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
 
 test3:
-	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.5 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.04 --wx 0 --wy 0 --wz 0 --wf 0 --d 600 --ro 0.1
 
 test4:
-	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.04 --wx 1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
+	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.47 --wx 1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1
 
 test5:
 	./$(TARGET) --mx 1 --my 0 --ma 45 --v 70 --cd 0.47 --wx -1 --wy 0 --wz 0 --wf 5 --d 600 --ro 0.1

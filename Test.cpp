@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Test.h"
 
-Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, double g, double roA) {
+Test::Test(Point direction, const Wind& w, double dB, double roB, double cD, double g, double roA) {
     this->t = 0.0;
 
     this->projectile = FlyingBall(dB, roB, cD, g, roA, w.forceDirection);
@@ -13,20 +13,20 @@ Test::Test(PointN direction, const Wind& w, double dB, double roB, double cD, do
 
     double h = 0.1;
 
-    PointN startPosition = PointN(3);
+    Point startPosition = Point(3);
     startPosition.x[0] = 0;
     startPosition.x[1] = 0;
     startPosition.x[2] = 0;
 
     double c = cos(direction.x[2]) / sqrt(direction.x[1] * direction.x[1] + direction.x[0] * direction.x[0]);
-    PointN startVelocity = PointN(3);
+    Point startVelocity = Point(3);
     startVelocity.x[0] = direction.x[3] * c * direction.x[0];
     startVelocity.x[1] = direction.x[3] * c * direction.x[1];
     startVelocity.x[2] = direction.x[3] * sin(direction.x[2]);
 
-    PointN startAcceleration = accelFunction->GetValue(t, startPosition, startVelocity);
+    Point startAcceleration = accelFunction->GetValue(t, startPosition, startVelocity);
 
-    this->integrator = NystromN(accelFunction, t, startPosition, startVelocity, h, startAcceleration);
+    this->integrator = Nystrom(accelFunction, t, startPosition, startVelocity, h, startAcceleration);
 }
 void Test::Start() {
 

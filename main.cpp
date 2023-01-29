@@ -2,17 +2,17 @@
 
 #include "Wind.h"
 #include "FlyingBall.h"
-#include "PointN.h"
+#include "Point.h"
 #include "Test.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
 
-    PointN direction(4);
+    Point direction(4);
     double cD = 0.0;
     double wForce = 0.0;
-    PointN dir = PointN(3);
+    Point dir = Point(3);
 
     double d = 0.0;
     double ro = 0.0;

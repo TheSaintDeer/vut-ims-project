@@ -6,7 +6,7 @@
 
 #include "Wind.h"
 
-Wind::Wind(const PointN& dir, double force) {
+Wind::Wind(const Point& dir, double force) {
     this->direction = dir;
     this->force = force;
 

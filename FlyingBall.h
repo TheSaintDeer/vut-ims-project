@@ -1,7 +1,7 @@
 #pragma once
 
 #include <cmath>
-#include "NystromN.h"
+#include "Nystrom.h"
 
 class FlyingBall : public SecondDerivativeN {
 
@@ -13,14 +13,14 @@ private:
     double roA = 0.0;
     double mB = 0.0;
     double aB = 0.0;
-    PointN wind = PointN(3);
+    Point wind = Point(3);
 
 public:
-    FlyingBall(double dB, double roB, double cD, double g, double roA, PointN w);
+    FlyingBall(double dB, double roB, double cD, double g, double roA, Point w);
 
     FlyingBall();
 
-    PointN GetValue(double t, PointN y, PointN v) override;
+    Point GetValue(double t, Point y, Point v) override;
 };
 
 

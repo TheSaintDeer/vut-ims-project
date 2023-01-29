@@ -13,11 +13,11 @@ class Test {
 public:
     double t = 0.0;
     FlyingBall projectile;
-    NystromN integrator;
-    PointN position = PointN(3);
-    PointN velocity = PointN(3);
-    PointN acceleration = PointN(3);
+    Nystrom integrator;
+    Point position = Point(3);
+    Point velocity = Point(3);
+    Point acceleration = Point(3);
 
-    Test(PointN direction, const Wind& w, double dB, double roB, double cD, double g, double roA);
+    Test(Point direction, const Wind& w, double dB, double roB, double cD, double g, double roA);
     void Start();
 };

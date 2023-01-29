@@ -3,7 +3,7 @@
 //
 #include "FlyingBall.h"
 
-PointN FlyingBall::GetValue(double t, PointN y, PointN v) {
+Point FlyingBall::GetValue(double t, Point y, Point v) {
 
     double vx = v[0] - wind.x[0];
     double vy = v[1] - wind.x[1];
@@ -31,7 +31,7 @@ PointN FlyingBall::GetValue(double t, PointN y, PointN v) {
     double dragY = -drag * cosY;
     double dragZ = -drag * cosZ;
 
-    PointN force = PointN(3);
+    Point force = Point(3);
     force.x[0] = dragX;
     force.x[1] = dragY;
     force.x[2] = -mB * g + dragZ;
@@ -40,12 +40,12 @@ PointN FlyingBall::GetValue(double t, PointN y, PointN v) {
     force.x[1] /= mB;
     force.x[2] /= mB;
 
-    PointN acceleration = force;
+    Point acceleration = force;
 
     return acceleration;
 }
 
-FlyingBall::FlyingBall(double dB, double roB, double cD, double g, double roA, PointN w) {
+FlyingBall::FlyingBall(double dB, double roB, double cD, double g, double roA, Point w) {
     this->dB = dB;
     this->roB = roB;
     this->cD = cD;
